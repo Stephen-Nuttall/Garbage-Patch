@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6745005476056045821}
   - component: {fileID: 2183835438982711024}
   - component: {fileID: 653034130965361555}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Tile Sprite
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -206,7 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionTilePrefab: {fileID: 1415742701290488932, guid: ebd2d08a0747ec44883a7071015bf646, type: 3}
-  emptyTilePrefab: {fileID: 2156103093535319655, guid: ca254cfb15d49cf44b338b20bfc75bcd, type: 3}
+  disallowOverlapTag: Tile Collision
+  disallowOverlapRadius: 0.1
 --- !u!1 &2156103093535319655
 GameObject:
   m_ObjectHideFlags: 0
