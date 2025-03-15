@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 3274299358569526400}
   - component: {fileID: 4638122673177687091}
   - component: {fileID: 8682930217984088754}
+  - component: {fileID: -8958082488215657688}
   - component: {fileID: 4320444850232922952}
+  - component: {fileID: 7934179707631403028}
   m_Layer: 0
   m_Name: Trash (T-shirt)
   m_TagString: Untagged
@@ -135,6 +137,35 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7022161, y: 0.74168974}
   m_EdgeRadius: 0
+--- !u!114 &-8958082488215657688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4186711554866113914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7934179707631403028}
+          m_TargetAssemblyTypeName: FloatingItem, Assembly-CSharp
+          m_MethodName: PickUpItem
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &4320444850232922952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +180,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minMoveSpeed: {x: 0.3, y: -0.6}
   maxMoveSpeed: {x: 0.8, y: 0.6}
+--- !u!114 &7934179707631403028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4186711554866113914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a126e4548cb0bf4998155b507ea8060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: bac57cbad78c1df4d83bc7341bd8e43d, type: 2}

@@ -11,6 +11,7 @@ public class TileSprite : MonoBehaviour
         CheckOverlap();
     }
 
+    // Run by EventTrigger component (PointerClick mode)
     public void BreakTile()
     {
         Destroy(transform.parent.gameObject);

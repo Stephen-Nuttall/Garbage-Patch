@@ -14,6 +14,7 @@ public class TileCollider : MonoBehaviour
         CheckOverlap();
     }
 
+    // Run by EventTrigger component (PointerClick mode)
     public void PlaceTile()
     {
         // find any colliders this object overlaps with
