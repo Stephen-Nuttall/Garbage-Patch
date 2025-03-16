@@ -178,6 +178,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefabName: Tile
+  tileItem: {fileID: 11400000, guid: 964381c940e271a41a8146a90a355769, type: 2}
+  emptyBucketItem: {fileID: 11400000, guid: ef1a1dc048a20774ca3a090c753b21f7, type: 2}
+  waterBucketItem: {fileID: 11400000, guid: 536b5f63a5a57e046ba77fc53bdaf09f, type: 2}
+  oilBucketItem: {fileID: 11400000, guid: 3be980a62cb4234458fbdb441177daf3, type: 2}
+  cantPlaceSound:
+    Guid:
+      Data1: 935503317
+      Data2: 1212295359
+      Data3: 1760177826
+      Data4: 1822988075
+    Path: event:/Fail
   requireNearbyToPlaceTag: Tile Sprite
   disallowOverlapTag: Tile Sprite
   requireNearbyToPlaceRadius: 0.6

@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be82243b9edc68f429dd33652e4b876f, type: 3}
+  m_Sprite: {fileID: -2968672845955775690, guid: 0da9ebabadb592d4fbf165dc5f835694, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -205,9 +205,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2345ee535e8c0419e4c6dc6b2b51fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionTilePrefab: {fileID: 1415742701290488932, guid: ebd2d08a0747ec44883a7071015bf646, type: 3}
   disallowOverlapTag: Tile Collision
   disallowOverlapRadius: 0.1
+  breakable: 1
+  collisionTilePrefab: {fileID: 1415742701290488932, guid: ebd2d08a0747ec44883a7071015bf646, type: 3}
+  flimsySailPrefab: {fileID: 2494508120470893933, guid: b49bf1c9daa078f41aa9dbabf38a4317, type: 3}
+  tileItem: {fileID: 11400000, guid: 964381c940e271a41a8146a90a355769, type: 2}
+  flimsySail: {fileID: 11400000, guid: 37d8d200cd830b44292e461a79e83d7f, type: 2}
 --- !u!1 &2156103093535319655
 GameObject:
   m_ObjectHideFlags: 0

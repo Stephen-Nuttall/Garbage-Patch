@@ -63,8 +63,11 @@ public class InventoryManager : MonoBehaviour
         inventoryObject.SetActive(!inventoryObject.activeInHierarchy);
     }
 
-    public bool AddItem(Item item)
+    public int AddItem(Item item, int quantity = 1)
     {
+        if (quantity <= 0)
+            return 0;
+
         int i = 0;
         int emptySlotIndex = -1;
         bool emptySlotFound = false;
@@ -84,8 +87,8 @@ public class InventoryManager : MonoBehaviour
             {
                 if (itemInSlot.GetItem() == item && itemInSlot.GetCount() < item.GetMaxStackSize())
                 {
-                    itemInSlot.AddCount();
-                    return true;
+                    int leftoverAmount = itemInSlot.AddCount(quantity);
+                    return AddItem(item, leftoverAmount);
                 }
             }
 
@@ -94,17 +97,19 @@ public class InventoryManager : MonoBehaviour
 
         if (emptySlotFound)
         {
-            SpawnNewItem(item, slots[emptySlotIndex]);
-            return true;
+            int leftoverAmount = SpawnNewItem(item, slots[emptySlotIndex]).AddCount(quantity - 1);
+            return AddItem(item, leftoverAmount);
         }
 
-        return false;
+        return quantity;
     }
 
-    void SpawnNewItem(Item item, InventorySlot slot)
+    InventoryItem SpawnNewItem(Item item, InventorySlot slot)
     {
         GameObject newItemObject = Instantiate(inventoryItemPrefab, slot.transform);
-        newItemObject.GetComponent<InventoryItem>().InitializeItem(item);
+        InventoryItem newItem = newItemObject.GetComponent<InventoryItem>();
+        newItem.InitializeItem(item);
+        return newItem;
     }
 
     public Item GetSelectedItem()
@@ -133,5 +138,19 @@ public class InventoryManager : MonoBehaviour
         {
             return null;
         }
+    }
+
+    public bool ConsumeItem(Item item, int amount = 1)
+    {
+        foreach (InventorySlot slot in slots)
+        {
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if (itemInSlot != null && itemInSlot.GetItem() == item)
+            {
+                return itemInSlot.RemoveCount(amount);
+            }
+        }
+
+        return false;
     }
 }

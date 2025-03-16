@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{91eadbd0-ae6b-4ba9-b471-327be1a33c49}">
+		<property name="assetPath">
+			<value>Sneaky Snitch.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>136.6204081632653</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{559fff0a-2aa5-48d8-93f6-8fb6350e2919}</destination>
+		</relationship>
+	</object>
+</objects>

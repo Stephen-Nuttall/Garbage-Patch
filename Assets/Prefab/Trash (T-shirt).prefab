@@ -193,3 +193,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: bac57cbad78c1df4d83bc7341bd8e43d, type: 2}
+  quantity: 2
